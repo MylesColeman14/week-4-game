@@ -10,18 +10,21 @@ $(document).ready(function(){
 	player = [];
 
 	$("#character").on("click", function(){
-		characterChoice = character.value;
+		var characterChoice = document.getElementById("character").value;
 		player.push(character[characterChoice]);
+		console.log("the click works you chose (player array): "+ player[0]);
 
-		for(i=0;i=character.length;i=0)
+		for(i=0;i<character.length;i++)
 		{
 			enemy.push(character[i]);
+			console.log(character[i]);
+			console.log(enemy);
 		}
 	});
 
-	$("#attackbtn").on("click", function()){
+	$("#attackbtn").on("click", function(){
 		attack();
-	}
+	});
 
 
 	function playerStats(){
@@ -45,6 +48,6 @@ $(document).ready(function(){
 
 	
 
-})
+});
 
 
